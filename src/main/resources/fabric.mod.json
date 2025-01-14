@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "extraplanar-entities",
+	"version": "${version}",
+	"name": "extraplanar-entities",
+	"description": "Faithful recreations of Zooliminology Project's findings on extraplanar creatures originating from the Far Plane",
+	"authors": [
+		"Zooliminology Project"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/extraplanar-entities/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.zoolim.extraplanarentities.Extraplanarentities"
+		],
+		"client": [
+			"com.zoolim.extraplanarentities.ExtraplanarentitiesClient"
+		],
+		"fabric-datagen": [
+			"com.zoolim.extraplanarentities.ExtraplanarentitiesDataGenerator"
+		]
+	},
+	"mixins": [
+		"extraplanar-entities.mixins.json",
+		{
+			"config": "extraplanar-entities.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
